@@ -39,5 +39,7 @@ io.on("connection", (socket) => {
     });
 });
 
-
-server.listen(3030);
+const port = process.env.PORT || 3030;
+server.listen(port, function() {
+    console.log("Server started")
+});
